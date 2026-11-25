@@ -1,6 +1,7 @@
 import 'package:fixly_app/screens/home_screens/ai_assistant.dart';
 import 'package:fixly_app/screens/home_screens/home_page.dart';
 import 'package:fixly_app/screens/login_page.dart';
+import 'package:fixly_app/screens/store/store_page.dart';
 import 'package:flutter/material.dart';
 import 'package:fixly_app/theme/theme.dart';
 import 'package:flutter/cupertino.dart';
@@ -67,6 +68,16 @@ class ProfilePage extends StatelessWidget {
                 leading: Icon(Icons.error_outline,color: AppColors.orange),
                 title: Text('About Fexly',style:TextStyle(color: AppColors.orange),),
                 onTap: () => Navigator.pop(context),
+              ),
+              ListTile(
+                leading: Icon(Icons.store,color: AppColors.orange),
+                title: Text('Store',style:TextStyle(color: AppColors.orange),),
+                onTap: () => Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => StorePage(),
+            ),
+                ),
               ),
               ListTile(
                 leading: Icon(Icons.logout,color: AppColors.red),

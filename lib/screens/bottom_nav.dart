@@ -15,14 +15,14 @@ class FlexyBottomNavigation extends StatelessWidget {
   static const List<IconData> icons = [
     Icons.home_rounded,
     Icons.assignment_outlined,
-    Icons.history_rounded,
+    Icons.store_rounded,
     Icons.person_outline_rounded,
   ];
 
   static const List<String> labels = [
     'Home',
     'My Requests',
-    'History',
+    'Store',
     'Profile',
   ];
 

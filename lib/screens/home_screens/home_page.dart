@@ -1,4 +1,5 @@
 
+import 'package:fixly_app/screens/store/store_page.dart';
 import 'package:flutter/material.dart';
 import 'package:fixly_app/theme/theme.dart';
 import 'package:fixly_app/widgets/home_widgets.dart';
@@ -80,15 +81,24 @@ class _HomePageState extends State<HomePage> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => const ProfilePage(),
+        builder: (context) => ProfilePage(),
       ),
     );
   } else {
-    setState(() {
+    if (index == 2) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => StorePage(),
+      ),
+    );
+  } else{ setState(() {
       selectedIndex = index;
-    });
+    });}
+  
   }
 },
+
       ),
     );
   }
